@@ -1,0 +1,528 @@
+/** Start of Global Rules */
+:root {
+  --custom-gray-rgb: 116, 129, 130;
+  --custom-gray-2-rgb: 247, 247, 247;
+  --custom-gray-3-rgb: 153, 153, 153;
+}
+::selection {
+  background: var(--bs-black);
+  color: var(--bs-white);
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Montserrat", sans-serif;
+}
+.text-gray {
+  --bs-text-opacity: 1;
+  color: rgba(var(--custom-gray-rgb), var(--bs-text-opacity)) !important;
+}
+.text-gray-2 {
+  --bs-text-opacity: 1;
+  color: rgba(var(--custom-gray-2-rgb), var(--bs-text-opacity)) !important;
+}
+.text-gray-3 {
+  --bs-text-opacity: 1;
+  color: rgba(var(--custom-gray-3-rgb), var(--bs-text-opacity)) !important;
+}
+.bg-gray {
+  --bs-bg-opacity: 1;
+  background-color: rgba(
+    var(--custom-gray-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
+}
+.bg-gray-2 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(
+    var(--custom-gray-2-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
+}
+.btn-custom-black {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-black);
+  --bs-btn-border-color: var(--bs-black);
+  --bs-btn-hover-color: var(--bs-black);
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: var(--bs-black);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-black);
+  --bs-btn-active-border-color: var(--bs-black);
+}
+.btn-outline-custom-black {
+  --bs-btn-color: var(--bs-black);
+  --bs-btn-border-color: var(--bs-black);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-black);
+  --bs-btn-hover-border-color: var(--bs-black);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-black);
+  --bs-btn-active-border-color: var(--bs-black);
+}
+.word-spacing {
+  word-spacing: 2px;
+}
+.main-title {
+  width: fit-content;
+}
+.main-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../imgs/dots.png);
+}
+/** End of Global Rules */
+
+/** Start of Preloader  */
+#preloader {
+  z-index: 200;
+  background: url(../imgs/loader.gif) center center / 15% no-repeat;
+}
+/** End of Preloader  */
+
+/** Start of Navbar */
+.navbar {
+  --bs-navbar-hover-color: var(--bs-white);
+  --bs-navbar-color: var(--bs-white);
+  --bs-navbar-active-color: var(--bs-white);
+  --bs-navbar-brand-color: var(--bs-white);
+}
+@media (max-width: 767px) {
+  .navbar {
+    --bs-navbar-hover-color: var(--bs-black);
+    --bs-navbar-color: var(--bs-black);
+    --bs-navbar-active-color: var(--bs-black);
+  }
+}
+.navbar.scroll {
+  position: fixed !important;
+  z-index: 100;
+  margin-top: 0 !important;
+  background: var(--bs-white);
+  box-shadow: var(--bs-box-shadow);
+  transition: 0.5s ease;
+  --bs-navbar-hover-color: var(--bs-black);
+  --bs-navbar-color: var(--bs-black);
+  --bs-navbar-active-color: var(--bs-black);
+  --bs-navbar-brand-color: var(--bs-black);
+}
+@media (min-width: 768px) {
+  .navbar .nav-item > a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--bs-white);
+    transition: 0.3s ease;
+  }
+  .navbar.scroll .nav-item > a::before {
+    background: var(--bs-black);
+  }
+  .navbar .nav-item:hover > a::before,
+  .navbar .nav-item > a.active::before {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .navbar.scroll .navbar-toggler i {
+    color: var(--bs-black) !important;
+  }
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background: var(--bs-white);
+  }
+}
+/** End of Navbar */
+
+/** Start of Header */
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../imgs/bg.jpg) 0px 0px / cover;
+}
+h1::after {
+  content: "Developer"; /* 9 */
+  content: "Designer"; /* 8 */
+  margin-left: 10px;
+  font-weight: 600;
+  animation: typing 10s linear infinite;
+}
+@keyframes typing {
+  0% {
+    content: "|";
+  }
+  1% {
+    content: "L|";
+  }
+  2% {
+    content: "La|";
+  }
+  3% {
+    content: "Lar|";
+  }
+  4% {
+    content: "Larr|";
+  }
+  5% {
+    content: "Larry|";
+  }
+  6% {
+    content: "Larry |";
+  }
+  7% {
+    content: "Larry D|";
+  }
+  8% {
+    content: "Larry Da|";
+  }
+  9% {
+    content: "Larry Dan|";
+  }
+  10% {
+    content: "Larry Dani|";
+  }
+  11% {
+    content: "Larry Danie|";
+  }
+  12% {
+    content: "Larry Daniel|";
+  }
+  13% {
+    content: "Larry Daniels|";
+  }
+  25% {
+    content: "Larry Daniels|";
+  }
+  26% {
+    content: "Larry Daniel|";
+  }
+  27% {
+    content: "Larry Danie|";
+  }
+  28% {
+    content: "Larry Dani|";
+  }
+  29% {
+    content: "Larry Dan|";
+  }
+  30% {
+    content: "Larry Da|";
+  }
+  31% {
+    content: "Larry D|";
+  }
+  32% {
+    content: "Larry |";
+  }
+  33% {
+    content: "Larry|";
+  }
+  34% {
+    content: "Larr|";
+  }
+  35% {
+    content: "Lar|";
+  }
+  36% {
+    content: "La|";
+  }
+  37% {
+    content: "L|";
+  }
+  38% {
+    content: "|";
+  }
+  39% {
+    content: "D|";
+  }
+  40% {
+    content: "De|";
+  }
+  41% {
+    content: "Dev|";
+  }
+  42% {
+    content: "Deve|";
+  }
+  43% {
+    content: "Devel|";
+  }
+  44% {
+    content: "Develo|";
+  }
+  45% {
+    content: "Develop|";
+  }
+  46% {
+    content: "Develope|";
+  }
+  47% {
+    content: "Developer|";
+  }
+  59% {
+    content: "Developer|";
+  }
+  60% {
+    content: "Develope|";
+  }
+  61% {
+    content: "Develop|";
+  }
+  62% {
+    content: "Develo|";
+  }
+  63% {
+    content: "Devel|";
+  }
+  64% {
+    content: "Deve|";
+  }
+  65% {
+    content: "Dev|";
+  }
+  66% {
+    content: "De|";
+  }
+  67% {
+    content: "D|";
+  }
+  68% {
+    content: "|";
+  }
+  69% {
+    content: "D|";
+  }
+  70% {
+    content: "De|";
+  }
+  71% {
+    content: "Des|";
+  }
+  72% {
+    content: "Desi|";
+  }
+  73% {
+    content: "Desig|";
+  }
+  74% {
+    content: "Design|";
+  }
+  75% {
+    content: "Designe|";
+  }
+  76% {
+    content: "Designer|";
+  }
+  92% {
+    content: "Designer|";
+  }
+  93% {
+    content: "Designe|";
+  }
+  94% {
+    content: "Design|";
+  }
+  95% {
+    content: "Desig|";
+  }
+  96% {
+    content: "Desi|";
+  }
+  97% {
+    content: "Des|";
+  }
+  98% {
+    content: "De|";
+  }
+  99% {
+    content: "D|";
+  }
+  100% {
+    content: "|";
+  }
+}
+/** End of Header */
+
+/** Start of About */
+.about-img::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -30px;
+  bottom: -30px;
+  width: 80%;
+  height: 80%;
+  background-image: url(../imgs/dots.png);
+}
+.about-sub-title {
+  letter-spacing: 2px;
+}
+.progress {
+  height: 35px;
+  box-shadow: var(--bs-box-shadow) inset;
+  letter-spacing: 2px;
+  --bs-progress-bar-bg: var(--bs-black);
+  --bs-progress-bg: var(--bs-white);
+}
+.progress-bar {
+  transition: width 0.5s linear;
+  width: 0;
+}
+/** End of About */
+/** Start of Services */
+.services-icon i {
+  transition: 0.5s ease;
+}
+.services-item:hover .services-icon i:first-child {
+  color: var(--bs-black) !important;
+}
+.services-item:hover .services-icon i:last-child {
+  color: var(--bs-white) !important;
+}
+/** End of Services */
+
+/** Start of Portfolio */
+.nav {
+  --bs-nav-link-color: var(--bs-black);
+  --bs-nav-link-hover-color: var(--bs-black);
+}
+.nav-pills {
+  --bs-nav-pills-link-active-color: var(--bs-black);
+  --bs-nav-pills-link-active-bg: var(--bs-white);
+}
+.nav-pills .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--bs-black);
+  transition: 0.3s ease;
+}
+.nav-pills .nav-link.active::before {
+  width: 100%;
+}
+.img-overlay {
+  inset: 5px;
+  letter-spacing: 2px;
+  transition: 0.5s ease;
+}
+.img-overlay h3 {
+  transform: translateY(-15px);
+  transition: 0.5s ease;
+}
+.img-overlay ul {
+  transform: translateY(15px);
+  transition: 0.5s ease;
+}
+.portfolio-img:hover .img-overlay {
+  opacity: 1 !important;
+}
+.portfolio-img:hover .img-overlay h3,
+.portfolio-img:hover .img-overlay ul {
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  #carouselExample2 {
+    max-width: 50%;
+  }
+}
+.modal-dialog {
+  margin-top: 30px !important;
+  margin-right: 30px !important;
+}
+.btn-close {
+  background-image: none;
+}
+/** End of Portfolio */
+
+/** Start of Clients  */
+#clients .carousel-item img {
+  width: 90px;
+  height: 90px;
+}
+#clients .carousel-indicators [data-bs-target] {
+  width: 20px;
+  height: 20px;
+  background: #d6d6d6;
+}
+/** End of Clients  */
+/** Start of Team  */
+.card-img img {
+  transition: 0.5s ease;
+}
+.card-img:hover img {
+  transform: scale(1.2);
+}
+.card-img .social-links {
+  inset: 5px;
+  opacity: 0;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+  transition: 0.5s ease;
+}
+.card:hover .card-img .social-links {
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+}
+.card-img .social-links ul li i {
+  transition: 0.1s;
+}
+.card-img .social-links ul li i:first-child::before {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.card-img .social-links ul li:hover i:first-child {
+  color: var(--bs-white);
+}
+.card-img .social-links ul li:hover i:first-child::before {
+  border-color: var(--bs-black);
+}
+.card-img .social-links ul li:hover i:last-child {
+  color: var(--bs-black);
+}
+/** End of Team  */
+/** Start of Contact us */
+#contact .contact-icon i {
+  transition: 0.5s ease;
+}
+#contact .contact-icon:hover i:first-child {
+  color: var(--bs-black) !important;
+}
+#contact .contact-icon:hover i:last-child {
+  color: var(--bs-white) !important;
+}
+.form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+#contact textarea {
+  height: 150px;
+  resize: none;
+}
+#contact textarea::placeholder {
+  font-size: 1.25rem;
+}
+/** End of Contact us */
